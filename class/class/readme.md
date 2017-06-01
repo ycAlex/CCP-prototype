@@ -8,4 +8,5 @@ to run the progam-> run "python manage.py runserver"
 
 visit 
 	/post/
+	
 after login in by a superuser, can see the comments on student
