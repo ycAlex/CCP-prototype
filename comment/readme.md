@@ -1,6 +1,5 @@
 
-访问
+visit
     /blog/
-会显示当前评论
-
-点击评论人名时会对该评论进行评论
+it will show the current comment
+click the user name allows add comment on comment
