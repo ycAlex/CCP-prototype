@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+<h1>comment add</h1>
+{% block contents %}
+    <form class="form-horizontal" method="post" action="{% url 'comment_add' comment %}">
+        {% csrf_token %}
+        <div class="control-group">
+            <label class="control-label" for="username">username</label>
+            <div class="controls">
+                <input id="username" type="text" name="username"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="email">email</label>
+            <div class="controls">
+                <input id="email" type="text" name="email"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="content">content</label>
+            <div class="controls">
+                <div class="textarea">
+                    <textarea type="" class="" name="content"> </textarea>
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <button class="btn" type="submit">submit</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

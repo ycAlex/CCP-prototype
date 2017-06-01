@@ -1,0 +1,3 @@
+{% for student in student_list %}
+class: {{ student.joined_class.class_name }}, student: <a href="/post/{{ student.id }}/">{{ student.user.username }}</a><br>
+{% endfor %}

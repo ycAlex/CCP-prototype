@@ -1,0 +1,5 @@
+<a href="/post/download/{{ student.id }}/">Download</a>
+{% for p in student.related_posts.all %}
+<img src="/media/{{ p.image }}"/><br>
+comment: {{ p.comment|default:'empty' }}
+{% endfor %}

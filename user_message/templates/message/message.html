@@ -1,0 +1,14 @@
+{% block message %}
+    {% for message in messages %}
+        <div class="row">
+            {% if message.from_user == user.id %}
+                <blockquote class="pull-right">{{ message.contents }}</blockquote>
+            {% else %}
+                <blockquote>{{ message.contents }}</blockquote>
+            {% endif %}
+        </div>
+
+
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% if title %}{{ title }} {% else %} Index {% endif %}</title>
+</head>
+<body>
+<link href="https://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css"
+      rel="stylesheet">
+<link href="https://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css"
+      rel="stylesheet">
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+
+
+{% block comment %}
+{% endblock %}
+<script src="https://cdn.bootcss.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+{#{% render_comment_list for object %}#}
+{#{% render_comment_form for object %}#}
+</body>
+</html>

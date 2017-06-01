@@ -1,0 +1,28 @@
+{% block message_add %}
+
+    <form class="form-horizontal" action="{% url 'message_add' user.id fromuser  %}" method="post">
+    {% csrf_token %}
+        <fieldset>
+            <div id="legend" class="">
+                <legend class="">message</legend>
+            </div>
+            <div class="control-group">
+
+                <!-- Textarea -->
+                <label class="control-label">message</label>
+                <div class="controls">
+                    <div class="textarea">
+                        <textarea type="" class="" name="content"> </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <!-- Button -->
+                <div class="controls">
+                    <button class="btn btn-success">send</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+{% endblock %}

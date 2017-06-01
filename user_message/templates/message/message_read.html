@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="row">
+    <div class="span2"></div>
+        <div class="span10"><h3>{{ user }}</h3><a href="{% url 'logout' %}">Logout</a></div>
+    </div>
+<div class="row">
+<div class="span1"></div>
+    <div class="span3">
+        {% block userlist %}
+            {% include "user_list.html" %}
+        {% endblock %}
+    </div>
+    <div class="span8">
+        {% block message %}
+            {% include "message.html" %}
+            {% include "message_add.html" %}
+        {% endblock %}
+    </div>
+</div>
+
+{% endblock %}

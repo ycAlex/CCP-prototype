@@ -1,0 +1,32 @@
+<ul class="nav nav-list">
+    {% for comment in comments %}
+        <li id="comment-{{ comment.id }}">
+            {% if comment.parent_username %}
+                <p>
+                    <a href="{% url 'comment_add' comment.id %}">{{ comment.username }} </a>-----><a
+                        href="{% url 'comment_add' comment.parent_comment %}">{{ comment.parent_username }}</a>
+                </p>
+            {% else %}
+                <a href="{% url 'comment_add' comment.id %}">{{ comment.username }}</a>
+            {% endif %}
+            <hr>
+            {% if comment.parent_comment != 0 %}
+            <blockquote>
+                <a href="#comment-{{ comment.parent_comment }}" onclick="setHighlight();">parent</a>
+            </blockquote>
+            {% endif %}
+            <p>{{ comment.content }}</p>
+        </li>
+
+    {% endfor %}
+</ul>
+<script>
+    function setHighlight() {
+        let lis = document.getElementsByTagName('li')
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].setAttribute('style', '')
+        }
+        console.log(document.getElementById(event.target.getAttribute('href').split('#')[1]).setAttribute('style', 'background-color: yellow;'))
+    }
+</script>
+{#{{ comments }}#}

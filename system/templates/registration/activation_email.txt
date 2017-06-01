@@ -1,0 +1,2 @@
+You are just register as {{ user }} on {{ site }}. Please click the <a href="http://{{ site }}/account/activate/{{ activation_key }}/">link</a>.
+The activation key is {{ activation_key }}. Please activate in {{ expiration_days }} days.
