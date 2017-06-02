@@ -1,4 +1,5 @@
 Please ensure there are at least 2 users in the system
+This prototype covers task 1.18 and 1.13
 
 visit
     /admin/
