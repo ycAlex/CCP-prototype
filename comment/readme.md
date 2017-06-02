@@ -1,4 +1,4 @@
-
+This prototype covers task 1.17
 visit
     /blog/
     
