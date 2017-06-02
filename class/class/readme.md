@@ -1,10 +1,11 @@
+This prototype covers task:1.04,1.05,1.08,1.11,1.12,1.16 and 1.14
+ create a super user->run "python manage.py createsuperuser" from command line
+ run the progam-> run "python manage.py runserver"
 
 visit
     /admin/
     
 it will shows Class,Parent,Posts,Students and Teachers
-to create a super->run "python manage.py createsuperuser" from command line
-to run the progam-> run "python manage.py runserver"
 
 visit 
 	/post/
